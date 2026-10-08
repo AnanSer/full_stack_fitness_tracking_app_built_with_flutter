@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "background": "#111316", "secondary-fixed": "#ffdbd0", "primary-container": "#00f0a0", "surface-container-low": "#1a1c1f", "inverse-on-surface": "#2f3034", "secondary": "#ffb59d", "surface": "#111316", "on-tertiary-fixed-variant": "#004e5a", "surface-container-lowest": "#0c0e11", "tertiary-container": "#53e5ff", "primary": "#b6ffd4", "on-error-container": "#ffdad6", "surface-variant": "#333538", "inverse-primary": "#006c46", "secondary-fixed-dim": "#ffb59d", "surface-dim": "#111316", "on-tertiary-fixed": "#001f25", "primary-fixed-dim": "#00e296", "on-primary-fixed": "#002112", "on-tertiary-container": "#006472", "surface-bright": "#37393d", "on-primary-container": "#006843", "surface-container-high": "#282a2d", "on-surface-variant": "#b9cbbe", "error": "#ffb4ab", "secondary-container": "#b83900", "error-container": "#93000a", "surface-container-highest": "#333538", "on-secondary-container": "#ffddd2", "surface-container": "#1e2023", "tertiary-fixed-dim": "#2fd9f4", "primary-fixed": "#4dffb2", "on-primary-fixed-variant": "#005234", "on-tertiary": "#00363e", "on-secondary-fixed": "#390c00", "tertiary": "#d0f6ff", "tertiary-fixed": "#a2eeff", "on-background": "#e2e2e6", "outline-variant": "#3b4a40", "surface-tint": "#00e296", "outline": "#849589", "on-primary": "#003822", "inverse-surface": "#e2e2e6", "on-secondary-fixed-variant": "#832600", "on-surface": "#e2e2e6", "on-secondary": "#5d1900", "on-error": "#690005" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "margin-tablet": "2rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "margin-desktop": "3rem", "gutter": "1rem", "space-xl": "2.25rem", "space-sm": "0.5rem", "space-md": "1rem", "gutter-tablet": "1.5rem", "gutter-desktop": "2rem", "margin": "1rem" }, fontFamily: { "title-lg": ["Manrope"], "headline-lg-mobile": ["Lexend"], "body-lg": ["Manrope"], "headline-lg": ["Lexend"], "headline-md": ["Lexend"], "display-lg-mobile": ["Lexend"], "label-md": ["Lexend"], "body-md": ["Manrope"], "title-md": ["Manrope"], "display-lg": ["Lexend"], "label-sm": ["Lexend"], "label-lg": ["Lexend"] }, fontSize: { "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }], "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.01em", fontWeight: "600" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }], "display-lg-mobile": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "title-md": ["16px", { lineHeight: "22px", fontWeight: "600" }], "display-lg": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "700" }], "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.05em", fontWeight: "500" }], "label-lg": ["14px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-16 px-gutter flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="FitTrack Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VrpS3-j-eQkHwkTO2w7fjIQCBwEeGuLof69YXC3zsPTiymv-Gnk4xtGadPFSX6qwv0ZcL22rzTAEOf8KLdrTtHThCmvVght_iPJD0JUBq1vIcYhz_HEJLS1L5sLpYbXfxfsSqDl8Vu-j_nSThErG-2rHSiBgMC_NMSuoZ6v40X8oo0E_fW-GF7KcwW9hBQWZPkAkaQcoDI0ple5NPEYAqM1fPcnM-m_9KHwwN1MK2WzA"/><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-primary tracking-wider uppercase font-semibold leading-tight">FitTrack</span><span class="font-title-md text-title-md text-on-surface truncate">Home</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors focus:outline-none" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span></button><button aria-label="User Profile" class="w-11 h-11 flex items-center justify-center rounded-full focus:outline-none" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAapHgxz05AKuyiMk5INZAq_896a-4HHREeaxgoQou71q-yHSyhXXRC3kHLECuwlpdGTxGOrV1pd9JxKKUfW0-TYQGqIbnHDSQ7n5DgQ48Ptdl5TgQ8Ps4faUVbSIHbL5OF2aNynNd-5ryAvYfrFPpI3r5eSJocmSEjWk8970DrH4CDbTsqKToIiuOyHT5GIgCoq_ukaO5Aoxqoz6cn-mNTrn-SIQWR2SwHWRcKo8_3"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full px-gutter pb-space-lg gap-space-lg">
+<!-- Greeting & Daily Status Section -->
+<section class="flex flex-col gap-space-xs mt-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm tracking-wider uppercase">Wednesday, Oct 24</span>
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container"></span>
+</span>
+</div>
+<button aria-label="5 day streak" class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary fill-1" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-semibold text-secondary">5 Days</span>
+</button>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Good morning, Alex 👋</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Ready to crush your workout today?</p>
+</div>
+</div>
+</section>
+<!-- Today's Workout Hero Card -->
+<section class="relative overflow-hidden rounded-3xl bg-surface-container-low shadow-xl transition-all duration-300">
+<!-- Atmospheric Ambient Glow Backdrops -->
+<div class="absolute -right-16 -top-16 w-56 h-56 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-12 -bottom-12 w-44 h-44 rounded-full bg-secondary-container/15 blur-2xl pointer-events-none"></div>
+<div class="relative p-space-lg flex flex-col gap-space-md">
+<!-- Tag / Badge & Preview Row -->
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container/15 text-primary font-label-md text-label-md tracking-wide font-semibold">
+<span class="material-symbols-outlined text-[15px]">fitness_center</span>
+          TODAY'S FOCUS • UPPER BODY
+        </span>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors" id="btn-preview-workout" type="button">
+<span>Preview</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Workout Title & Brief Visual Image Mosaic Banner -->
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">Upper Body Hypertrophy</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Focus on chest density, lateral delts, and arms hypertrophy.</p>
+</div>
+<!-- Quick Metrics Pill Strip -->
+<div class="grid grid-cols-4 gap-2 pt-1">
+<div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-surface-container text-center">
+<span class="material-symbols-outlined text-primary text-[18px]">format_list_numbered</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold mt-1">6</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Exercises</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-surface-container text-center">
+<span class="material-symbols-outlined text-tertiary-container text-[18px]">schedule</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold mt-1">45</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mins</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-surface-container text-center">
+<span class="material-symbols-outlined text-secondary text-[18px]">bolt</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold mt-1">Med</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Intensity</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-surface-container text-center">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">local_fire_department</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold mt-1">~340</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Kcal</span>
+</div>
+</div>
+<!-- Workout Context Imagery Preview Strip -->
+<div class="relative w-full h-24 rounded-2xl overflow-hidden mt-1 shadow-inner bg-surface-container-lowest">
+<img class="w-full h-full object-cover opacity-80" data-alt="Athletic person in minimalist gym training upper body dumbell press under moody cyan and green gym lights, cinematic photography, high contrast dark fitness background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY3K5p07afApaV57H-sfgAEDj4iBlJ7DyhpuBQnHx97EACedDMtnt2SV-a81J8YMPWpSbBR0TFPEbNG7kE3Q_kwSxUR5cD6AKonTI1B3sXnncA0J23oEa2PQncZRSTCRwOMxRneaLjVAI78MeQmwzivxYJihT8cdhxBgwixx4gq9M_ylM2nzRwfV37yh9qkG-7W0Vtbpc_l6o8h6qEiGfRaweQATkjy-AgRbtqqqcG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/40 to-transparent flex items-end p-2.5">
+<div class="flex items-center gap-1.5 bg-surface-container-lowest/80 backdrop-blur-md px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-primary text-[14px]">timer</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">Optimal window: 9:00 AM - 11:30 AM</span>
+</div>
+</div>
+</div>
+<!-- Primary Action CTA -->
+<div class="pt-1">
+<button class="w-full h-14 rounded-full bg-primary-container text-on-primary-container font-headline-md text-title-md flex items-center justify-center gap-2 font-bold shadow-[0_6px_20px_rgba(0,240,160,0.22)] active:scale-[0.98] transition-all hover:brightness-105" id="start-workout-trigger" type="button">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span>Start Workout</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Quick Statistics Grid -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-1">
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">Monthly Snapshot</h3>
+<span class="font-label-md text-label-md text-on-surface-variant">October 2024</span>
+</div>
+<div class="grid grid-cols-3 gap-2.5">
+<!-- Card 1: Workouts Completed -->
+<div class="p-3.5 rounded-3xl bg-surface-container-low flex flex-col justify-between shadow-sm min-w-0">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded-full bg-primary-container/15 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<span class="inline-flex items-center font-label-sm text-label-sm text-primary font-semibold">+3</span>
+</div>
+<div class="mt-3">
+<span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">18</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate mt-0.5">Workouts done</p>
+</div>
+</div>
+<!-- Card 2: Streak -->
+<div class="p-3.5 rounded-3xl bg-surface-container-low flex flex-col justify-between shadow-sm min-w-0">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px] fill-1" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Best 12</span>
+</div>
+<div class="mt-3">
+<span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">5 <span class="font-label-md text-label-md font-normal text-on-surface-variant">Days</span></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate mt-0.5">Active streak</p>
+</div>
+</div>
+<!-- Card 3: Total Time -->
+<div class="p-3.5 rounded-3xl bg-surface-container-low flex flex-col justify-between shadow-sm min-w-0">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded-full bg-tertiary-container/15 flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-[18px]">avg_pace</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">96%</span>
+</div>
+<div class="mt-3">
+<span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">14.2<span class="font-label-md text-label-md font-normal text-on-surface-variant">h</span></span>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate mt-0.5">Time active</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Progress Summary / Weekly Goal Section -->
+<section class="p-space-lg rounded-3xl bg-surface-container-low shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Weekly Goal Progress</span>
+<span class="font-body-md text-body-md text-on-surface-variant">4 of 5 sessions completed</span>
+</div>
+<!-- Radial Mini Gauge Indicator -->
+<div class="relative w-12 h-12 flex items-center justify-center">
+<svg class="w-12 h-12 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="80, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-md text-label-md font-bold text-on-surface">80%</span>
+</div>
+</div>
+<!-- Visual Linear Progress Track & Daily Checkers -->
+<div class="flex flex-col gap-2.5">
+<div class="grid grid-cols-7 gap-1.5 text-center">
+<!-- Mon (Done) -->
+<div class="flex flex-col items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">M</span>
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px] font-bold">check</span>
+</div>
+</div>
+<!-- Tue (Done) -->
+<div class="flex flex-col items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">T</span>
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px] font-bold">check</span>
+</div>
+</div>
+<!-- Wed (Done/Today) -->
+<div class="flex flex-col items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary font-bold">W</span>
+<div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px] font-bold">check</span>
+</div>
+</div>
+<!-- Thu (Scheduled Target Today) -->
+<div class="flex flex-col items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">T</span>
+<div class="w-9 h-9 rounded-full bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">priority_high</span>
+</div>
+</div>
+<!-- Fri (Rest/Scheduled) -->
+<div class="flex flex-col items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">F</span>
+<div class="w-9 h-9 rounded-full bg-surface-container text-on-surface-variant/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">bed</span>
+</div>
+</div>
+<!-- Sat (Target) -->
+<div class="flex flex-col items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">S</span>
+<div class="w-9 h-9 rounded-full bg-surface-container text-on-surface-variant/60 flex items-center justify-center">
+<span class="font-label-sm text-label-sm">5th</span>
+</div>
+</div>
+<!-- Sun (Rest) -->
+<div class="flex flex-col items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">S</span>
+<div class="w-9 h-9 rounded-full bg-surface-container text-on-surface-variant/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">self_improvement</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Monthly Milestone Badge Box -->
+<div class="flex items-center gap-3 p-3 rounded-2xl bg-surface-container">
+<div class="w-10 h-10 rounded-xl bg-tertiary-container/15 flex items-center justify-center text-tertiary-container shrink-0">
+<span class="material-symbols-outlined text-[22px]">military_tech</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Consistency Titan Award</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Only 2 workouts left to unlock level 4 badge</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px] ml-auto shrink-0">chevron_right</span>
+</div>
+</section>
+<!-- Recent Workouts Log -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-1">
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">Recent Workouts</h3>
+<button class="text-primary font-label-md text-label-md hover:underline" type="button">View All</button>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- Entry 1 -->
+<article class="p-4 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors shadow-sm flex items-center gap-3.5">
+<div class="w-12 h-12 rounded-2xl bg-primary-container/15 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">weight</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<h4 class="font-title-md text-title-md text-on-surface font-semibold truncate">Full Body Strength</h4>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-medium">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Complete
+            </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Yesterday, 5:30 PM</span>
+<div class="flex items-center gap-3 mt-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">fitness_center</span> 5 exercises
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span> 48 min
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[14px] fill-1" style="font-variation-settings: 'FILL' 1;">local_fire_department</span> 380 kcal
+            </span>
+</div>
+</div>
+</article>
+<!-- Entry 2 -->
+<article class="p-4 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors shadow-sm flex items-center gap-3.5">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container/20 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">cardio_load</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<h4 class="font-title-md text-title-md text-on-surface font-semibold truncate">HIIT Cardio Blast</h4>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-medium">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Complete
+            </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Monday, Oct 22</span>
+<div class="flex items-center gap-3 mt-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">repeat</span> 4 circuits
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span> 32 min
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[14px] fill-1" style="font-variation-settings: 'FILL' 1;">local_fire_department</span> 290 kcal
+            </span>
+</div>
+</div>
+</article>
+<!-- Entry 3 -->
+<article class="p-4 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors shadow-sm flex items-center gap-3.5">
+<div class="w-12 h-12 rounded-2xl bg-tertiary-container/15 text-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">sports_gymnastics</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<h4 class="font-title-md text-title-md text-on-surface font-semibold truncate">Legs &amp; Core Power</h4>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-medium">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Complete
+            </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Saturday, Oct 20</span>
+<div class="flex items-center gap-3 mt-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">fitness_center</span> 6 exercises
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span> 52 min
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[14px] fill-1" style="font-variation-settings: 'FILL' 1;">local_fire_department</span> 420 kcal
+            </span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Motivational Quote / Quick Rest Tip Footer Card -->
+<aside class="p-4 rounded-2xl bg-surface-container-high/60 flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">lightbulb</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Trainer Tip of the Day</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5 leading-snug">Hydrate 20 minutes prior to bench sets to maintain upper shoulder joint lubrication and peak torque.</p>
+</div>
+</aside>
+</div>
+<script>
+  (function() {
+    // Delightful micro-interaction for workout start button
+    const startBtn = document.getElementById('start-workout-trigger');
+    if (startBtn) {
+      startBtn.addEventListener('click', function() {
+        const originalText = this.innerHTML;
+        this.innerHTML = '<span class="material-symbols-outlined animate-spin text-[24px]">progress_activity</span><span>Preparing Session...</span>';
+        this.classList.add('opacity-90');
+        setTimeout(() => {
+          this.innerHTML = '<span class="material-symbols-outlined text-[24px]">check</span><span>Ready! Let\'s Move!</span>';
+          this.classList.remove('opacity-90');
+          setTimeout(() => {
+            this.innerHTML = originalText;
+          }, 2000);
+        }, 800);
+      });
+    }
+
+    // Preview button toggle
+    const previewBtn = document.getElementById('btn-preview-workout');
+    if (previewBtn) {
+      previewBtn.addEventListener('click', function() {
+        const original = this.innerHTML;
+        this.innerHTML = '<span class="text-primary font-semibold">6 Moves Queued</span>';
+        setTimeout(() => {
+          this.innerHTML = original;
+        }, 1800);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-low/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.35)]" data-active-classes="[&amp;_.active-pill]:bg-primary-container [&amp;_.active-pill]:text-on-primary-container [&amp;_.active-pill]:w-14 [&amp;_.active-pill]:h-8 [&amp;_.tab-label]:text-primary [&amp;_.tab-label]:font-semibold [&amp;_.active-pill_.material-symbols-outlined]:text-on-primary-container"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 min-w-[64px] min-h-[48px] py-1 text-on-surface-variant transition-colors group [&amp;_.active-pill]:bg-primary-container [&amp;_.active-pill]:text-on-primary-container [&amp;_.active-pill]:w-14 [&amp;_.active-pill]:h-8 [&amp;_.tab-label]:text-primary [&amp;_.tab-label]:font-semibold [&amp;_.active-pill_.material-symbols-outlined]:text-on-primary-container" data-path="home" href="#"><div class="active-pill flex items-center justify-center rounded-full transition-all duration-200"><span class="material-symbols-outlined text-[24px]">home</span></div><span class="tab-label font-label-sm text-label-sm transition-colors">Home</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] min-h-[48px] py-1 text-on-surface-variant transition-colors group" data-path="workouts" href="#"><div class="active-pill flex items-center justify-center rounded-full transition-all duration-200"><span class="material-symbols-outlined text-[24px]">fitness_center</span></div><span class="tab-label font-label-sm text-label-sm transition-colors">Workouts</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] min-h-[48px] py-1 text-on-surface-variant transition-colors group" data-path="exercises" href="#"><div class="active-pill flex items-center justify-center rounded-full transition-all duration-200"><span class="material-symbols-outlined text-[24px]">exercise</span></div><span class="tab-label font-label-sm text-label-sm transition-colors">Exercises</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] min-h-[48px] py-1 text-on-surface-variant transition-colors group" data-path="profile" href="#"><div class="active-pill flex items-center justify-center rounded-full transition-all duration-200"><span class="material-symbols-outlined text-[24px]">account_circle</span></div><span class="tab-label font-label-sm text-label-sm transition-colors">Profile</span></a></div></nav></body></html>
