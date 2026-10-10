@@ -1,4 +1,7 @@
-// Static sample data used across the Home dashboard.
+import 'package:flutter/material.dart';
+import '../theme/app_theme.dart';
+
+// Static sample data used across the Home dashboard & Workouts screen.
 // No backend, database, or API is involved.
 
 class WorkoutSummary {
@@ -146,4 +149,192 @@ class SampleData {
   static const String trainerTip =
       'Hydrate 20 minutes prior to bench sets to maintain upper shoulder joint '
       'lubrication and peak torque.';
+
+  // ---------------------------------------------------------------------------
+  // Workouts screen sample data
+  // ---------------------------------------------------------------------------
+  static const workoutsWeekStats = WorkoutsWeekStats(
+    completedSessions: 4,
+    goalSessions: 5,
+    totalTime: '3h 15m',
+    timeVsLastWeek: '+25m vs last wk',
+    streakDays: 5,
+    bestStreakDays: 12,
+  );
+
+  static const List<String> workoutFilterCategories = [
+    'All',
+    'Strength',
+    'Cardio',
+    'HIIT',
+    'Mobility',
+  ];
+
+  static const List<CompletedWorkoutSession> completedWorkoutSessions = [
+    CompletedWorkoutSession(
+      title: 'Push Day Hypertrophy',
+      subtitle: 'Strength • Chest, Shoulders, Triceps',
+      date: 'Today, 8:15 AM',
+      category: 'strength',
+      icon: Icons.fitness_center_rounded,
+      metrics: [
+        SessionMetric(label: 'Exercises', value: '6'),
+        SessionMetric(
+          label: 'Duration',
+          value: '52m',
+          valueColor: AppColors.tertiaryContainer,
+        ),
+        SessionMetric(
+          label: 'Burned',
+          value: '385 kcal',
+          valueColor: AppColors.secondary,
+        ),
+        SessionMetric(
+          label: 'Volume',
+          value: '4,820 kg',
+          valueColor: AppColors.primaryContainer,
+        ),
+      ],
+      footerNote: 'New Bench 1RM PR! (102.5 kg)',
+      footerIcon: Icons.military_tech_rounded,
+      footerColor: AppColors.primaryContainer,
+    ),
+    CompletedWorkoutSession(
+      title: 'Legs & Core Power',
+      subtitle: 'Strength • Quads, Hamstrings, Abs',
+      date: 'Tue, Oct 22',
+      category: 'strength',
+      icon: Icons.fitness_center_rounded,
+      metrics: [
+        SessionMetric(label: 'Exercises', value: '7'),
+        SessionMetric(
+          label: 'Duration',
+          value: '58m',
+          valueColor: AppColors.tertiaryContainer,
+        ),
+        SessionMetric(
+          label: 'Burned',
+          value: '440 kcal',
+          valueColor: AppColors.secondary,
+        ),
+        SessionMetric(
+          label: 'Volume',
+          value: '6,150 kg',
+          valueColor: AppColors.primaryContainer,
+        ),
+      ],
+      footerNote: 'High exertive fatigue (RPE 8.5)',
+      footerColor: AppColors.onSurfaceVariant,
+    ),
+    CompletedWorkoutSession(
+      title: 'HIIT Cardio Interval',
+      subtitle: 'Conditioning • Sprint Repeats & Row',
+      date: 'Sun, Oct 20',
+      category: 'hiit',
+      icon: Icons.timer_outlined,
+      metrics: [
+        SessionMetric(label: 'Circuits', value: '5'),
+        SessionMetric(
+          label: 'Duration',
+          value: '35m',
+          valueColor: AppColors.tertiaryContainer,
+        ),
+        SessionMetric(
+          label: 'Burned',
+          value: '320 kcal',
+          valueColor: AppColors.secondary,
+        ),
+        SessionMetric(
+          label: 'Avg HR',
+          value: '152 bpm',
+          valueColor: AppColors.secondary,
+        ),
+      ],
+      footerNote: 'Zone 4 Cardio: 18 mins',
+      footerIcon: Icons.favorite_rounded,
+      footerColor: AppColors.tertiaryContainer,
+    ),
+    CompletedWorkoutSession(
+      title: 'Upper Body Pull Focus',
+      subtitle: 'Strength • Back, Lats & Biceps',
+      date: 'Fri, Oct 18',
+      category: 'strength',
+      icon: Icons.fitness_center_rounded,
+      metrics: [
+        SessionMetric(label: 'Exercises', value: '6'),
+        SessionMetric(
+          label: 'Duration',
+          value: '48m',
+          valueColor: AppColors.tertiaryContainer,
+        ),
+        SessionMetric(
+          label: 'Burned',
+          value: '360 kcal',
+          valueColor: AppColors.secondary,
+        ),
+        SessionMetric(
+          label: 'Volume',
+          value: '4,200 kg',
+          valueColor: AppColors.primaryContainer,
+        ),
+      ],
+      footerNote: 'Target lat activation score: 94%',
+      footerColor: AppColors.onSurfaceVariant,
+    ),
+  ];
 }
+
+class CompletedWorkoutSession {
+  final String title;
+  final String subtitle;
+  final String date;
+  final String category;
+  final IconData icon;
+  final List<SessionMetric> metrics;
+  final String? footerNote;
+  final IconData? footerIcon;
+  final Color? footerColor;
+
+  const CompletedWorkoutSession({
+    required this.title,
+    required this.subtitle,
+    required this.date,
+    required this.category,
+    required this.icon,
+    required this.metrics,
+    this.footerNote,
+    this.footerIcon,
+    this.footerColor,
+  });
+}
+
+class SessionMetric {
+  final String label;
+  final String value;
+  final Color? valueColor;
+
+  const SessionMetric({
+    required this.label,
+    required this.value,
+    this.valueColor,
+  });
+}
+
+class WorkoutsWeekStats {
+  final int completedSessions;
+  final int goalSessions;
+  final String totalTime;
+  final String timeVsLastWeek;
+  final int streakDays;
+  final int bestStreakDays;
+
+  const WorkoutsWeekStats({
+    required this.completedSessions,
+    required this.goalSessions,
+    required this.totalTime,
+    required this.timeVsLastWeek,
+    required this.streakDays,
+    required this.bestStreakDays,
+  });
+}
+

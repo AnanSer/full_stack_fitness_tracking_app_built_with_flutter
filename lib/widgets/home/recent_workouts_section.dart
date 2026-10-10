@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+
 import '../../theme/app_theme.dart';
 import '../../models/workout_model.dart';
 
-/// Recent workouts log + trainer tip footer.
+/// Recent workouts log plus trainer tip footer.
 class RecentWorkoutsSection extends StatelessWidget {
   const RecentWorkoutsSection({super.key});
 
@@ -24,8 +25,7 @@ class RecentWorkoutsSection extends StatelessWidget {
               ),
               child: Text(
                 'View All',
-                style: AppTextStyles.labelMd(
-                    color: AppColors.primaryContainer),
+                style: AppTextStyles.labelMd(color: AppColors.primaryContainer),
               ),
             ),
           ],
@@ -36,8 +36,7 @@ class RecentWorkoutsSection extends StatelessWidget {
           physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
           itemCount: SampleData.recentWorkouts.length,
-          separatorBuilder: (context, index) =>
-              const SizedBox(height: 10),
+          separatorBuilder: (context, index) => const SizedBox(height: 10),
           itemBuilder: (context, i) =>
               _WorkoutEntry(workout: SampleData.recentWorkouts[i]),
         ),
@@ -52,20 +51,26 @@ class RecentWorkoutsSection extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Icon(Icons.lightbulb_outline_rounded,
-                  size: 20, color: AppColors.primaryContainer),
+              const Icon(
+                Icons.lightbulb_outline_rounded,
+                size: 20,
+                color: AppColors.primaryContainer,
+              ),
               const SizedBox(width: 12),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Trainer Tip of the Day',
-                        style: AppTextStyles.labelLg()),
+                    Text(
+                      'Trainer Tip of the Day',
+                      style: AppTextStyles.labelLg(),
+                    ),
                     const SizedBox(height: 4),
                     Text(
                       SampleData.trainerTip,
                       style: AppTextStyles.bodyMd(
-                          color: AppColors.onSurfaceVariant),
+                        color: AppColors.onSurfaceVariant,
+                      ),
                     ),
                   ],
                 ),
@@ -157,15 +162,17 @@ class _WorkoutEntry extends StatelessWidget {
                       Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          const Icon(Icons.check_circle_outline_rounded,
-                              size: 14,
-                              color: AppColors.primaryContainer),
+                          const Icon(
+                            Icons.check_circle_outline_rounded,
+                            size: 14,
+                            color: AppColors.primaryContainer,
+                          ),
                           const SizedBox(width: 3),
                           Text(
                             'Complete',
                             style: AppTextStyles.labelSm(
-                                color: AppColors.primaryContainer)
-                                .copyWith(fontWeight: FontWeight.w500),
+                              color: AppColors.primaryContainer,
+                            ).copyWith(fontWeight: FontWeight.w500),
                           ),
                         ],
                       ),
@@ -175,7 +182,8 @@ class _WorkoutEntry extends StatelessWidget {
                 Text(
                   workout.timestamp,
                   style: AppTextStyles.labelSm(
-                      color: AppColors.onSurfaceVariant),
+                    color: AppColors.onSurfaceVariant,
+                  ),
                 ),
                 const SizedBox(height: 7),
                 // Meta strip
@@ -183,15 +191,18 @@ class _WorkoutEntry extends StatelessWidget {
                   spacing: 12,
                   children: [
                     _MetaBit(
-                        icon: Icons.fitness_center_rounded,
-                        text: '${workout.exerciseCount} exercises'),
+                      icon: Icons.fitness_center_rounded,
+                      text: '${workout.exerciseCount} exercises',
+                    ),
                     _MetaBit(
-                        icon: Icons.timer_outlined,
-                        text: '${workout.durationMinutes} min'),
+                      icon: Icons.timer_outlined,
+                      text: '${workout.durationMinutes} min',
+                    ),
                     _MetaBit(
-                        icon: Icons.local_fire_department_rounded,
-                        text: '${workout.kcal} kcal',
-                        color: AppColors.secondary),
+                      icon: Icons.local_fire_department_rounded,
+                      text: '${workout.kcal} kcal',
+                      color: AppColors.secondary,
+                    ),
                   ],
                 ),
               ],

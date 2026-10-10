@@ -6,6 +6,7 @@ import '../widgets/home/monthly_snapshot_section.dart';
 import '../widgets/home/weekly_goal_section.dart';
 import '../widgets/home/recent_workouts_section.dart';
 import 'placeholder_screen.dart';
+import 'workouts_screen.dart';
 
 /// Root scaffold — hosts bottom navigation + page content.
 class HomeScreen extends StatefulWidget {
@@ -44,8 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   static const _pages = [
     _DashboardPage(),
-    PlaceholderScreen(
-        title: 'Workouts', icon: Icons.fitness_center_rounded),
+    WorkoutsScreen(),
     PlaceholderScreen(
         title: 'Exercises', icon: Icons.sports_gymnastics_rounded),
     PlaceholderScreen(
