@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:full_stack_fitness_tracking_app_built_with_flutter/main.dart';
 import 'package:full_stack_fitness_tracking_app_built_with_flutter/screens/exercises_screen.dart';
+import 'package:full_stack_fitness_tracking_app_built_with_flutter/screens/profile_screen.dart';
 import 'package:full_stack_fitness_tracking_app_built_with_flutter/theme/app_theme.dart';
 
 void main() {
@@ -61,5 +62,47 @@ void main() {
 
     expect(find.text('Barbell Bench Press'), findsOneWidget);
     expect(find.text('Push-ups'), findsOneWidget);
+  });
+
+  testWidgets('ProfileScreen displays profile details, goals, and settings',
+      (WidgetTester tester) async {
+    tester.view.physicalSize = const Size(800, 2000);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: buildAppTheme(),
+        home: const ProfileScreen(),
+      ),
+    );
+
+    // Profile header
+    expect(find.text('Alex Morgan'), findsOneWidget);
+    expect(find.text('Intermediate Athlete • Member since Jan 2024'),
+        findsOneWidget);
+    expect(find.text('Edit Profile'), findsOneWidget);
+
+    // Stats
+    expect(find.text('74'), findsOneWidget);
+    expect(find.text('Workouts'), findsOneWidget);
+
+    // Goal
+    expect(find.text('PRIMARY FOCUS'), findsOneWidget);
+    expect(find.text('Hypertrophy & Strength'), findsOneWidget);
+    expect(find.text('4 of 5 sessions'), findsOneWidget);
+
+    // Athletic Profile
+    expect(find.text('ATHLETIC PROFILE'), findsOneWidget);
+    expect(find.text('Fitness Level'), findsOneWidget);
+    expect(find.text('68.5 kg'), findsOneWidget);
+
+    // Settings & Actions
+    expect(find.text('PREFERENCES & SETTINGS'), findsOneWidget);
+    expect(find.text('Notifications'), findsOneWidget);
+    expect(find.text('Appearance'), findsOneWidget);
+    expect(find.text('Units of Measure'), findsOneWidget);
+    expect(find.text('Sign Out'), findsOneWidget);
   });
 }
