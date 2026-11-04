@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../theme/app_theme.dart';
 import '../../models/workout_model.dart';
 
-/// Recent workouts log plus trainer 
+/// Recent workouts log design and trainer tip
 class RecentWorkoutsSection extends StatelessWidget {
   const RecentWorkoutsSection({super.key});
 
